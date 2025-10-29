@@ -1,0 +1,30 @@
+[12:04 AM, 10/30/2025] Katapa ♾️: def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Read input range
+start = int(input())
+end = int(input())
+
+# Count prime numbers in the range
+count = 0
+for num in range(start, end + 1):
+    if is_prime(num):
+        count += 1
+
+print(count)
+[12:04 AM, 10/30/2025] Katapa ♾️: # Read number of terms from user
+n = int(input("Enter the number of terms: "))
+
+print("Fibonacci series:")
+
+a, b = 0, 1
+
+# Generate and print Fibonacci series
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
